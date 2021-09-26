@@ -9,25 +9,22 @@ Blockchain Case Study and POA Development Chain
 * ./geth --datadir node1 account new
 * ./geth --datadir node2 account new
 
+![ScreenShot](Screenshots/node1.PNG)
 
-<p align="center">
-    	<img src="Screenshots/node1.png" width="" height="300">
-</p>
 
 Node 1's key: 0x9b719f81030F5B2b056065E7cd13958C810D13FD
 
-<p align="center">
-    	<img src="Screenshots/node2.png" width="" height="300">
-</p>
+![ScreenShot](Screenshots/node2.PNG)
 
 Node 2's key: 0x0127f9036fE57a219cF5d825099EC64B403dB8F9
 
 ### 2. Next, generate your genesis block.
 
 * Run puppeth, name your network, and select the option to configure a new genesis block.
-<p align="center">
-    	<img src="Screenshots/genesis.png" width="" height="">
-</p>
+
+
+![ScreenShot](Screenshots/genesis.PNG)
+
 
 #### *In this case the name of network is **ntdnet***
 #### *Chain ID is **888***
@@ -46,9 +43,8 @@ Node 2's key: 0x0127f9036fE57a219cF5d825099EC64B403dB8F9
 
 * Export genesis configurations. This will fail to create two of the files, but you only need networkname.json.
 
-<p align="center">
-    	<img src="Screenshots/genesis2.png" width="" height="">
-</p>
+![ScreenShot](Screenshots/genesis2.PNG)
+
 
 ### 3. With the genesis block creation completed, we will now initialize the nodes with the genesis' json file.
 
@@ -57,9 +53,8 @@ Using geth, initialize each node with the new networkname.json.
 * ./geth --datadir node1 init networkname.json
 * ./geth --datadir node2 init networkname.json
 
-<p align="center">
-    	<img src="Screenshots/node12init.png" width="" height="">
-</p>
+![ScreenShot](Screenshots/node12init.PNG)
+
 
 ### 4. Now the nodes can be used to begin mining blocks.
 Run the nodes in separate terminal windows with the commands:
@@ -71,9 +66,8 @@ In this case:
 * ./geth --datadir node1 --unlock "9b719f81030F5B2b056065E7cd13958C810D13FD" --mine --rpc --allow-insecure-unlock
 * ./geth --datadir node2 --unlock "0127f9036fE57a219cF5d825099EC64B403dB8F9" --mine --port 30304 --bootnodes "enode://364dbff49557465f412a59da9adeeab3195956ca1ee86a18dfaf9a7e93343a668c7424f157d53d858a054e7968962a4234cf35d8d58e0e452ec9e58737363b45@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
 
-<p align="center">
-    	<img src="Screenshots/node1.enode.png" width="" height="">
-</p>
+![ScreenShot](Screenshots/node1.enode.PNG)
+
 
 NOTE: Type your password and hit enter - even if you can't see it visually!
 
@@ -83,9 +77,8 @@ NOTE: Type your password and hit enter - even if you can't see it visually!
 
 * Open the MyCrypto app, then click Change Network at the bottom left:
 
-<p align="center">
-    	<img src="Screenshots/mycrypto1.png" width="" height="">
-</p>
+![ScreenShot](Screenshots/mycrypto1.PNG)
+
 
 * Click "Add Custom Node", then add the custom network information that you set in the genesis.
 
@@ -102,37 +95,32 @@ NOTE: Type your password and hit enter - even if you can't see it visually!
 
 ### 7. After connecting to the custom network in MyCrypto, it can be tested by sending money between accounts.
 
+![ScreenShot](Screenshots/mycrypto2.PNG)
 
-<p align="center">
-    	<img src="Screenshots/mycrypto2.png" width="" height="">
-</p>
 
 On the next screen, click Select Wallet File, then navigate to the keystore directory inside your Node1 directory, select the file located there, provide your password when prompted and then click Unlock.
 
 
 This will open your account wallet inside MyCrypto.
 
-<p align="center">
-    	<img src="Screenshots/mycrypto3.png" width="" height="">
-</p>
+
+![ScreenShot](Screenshots/mycrypto3.PNG)
+
 
 In the To Address box, type the account address from Node2, then fill in an arbitrary amount of ETH:
 
-<p align="center">
-    	<img src="Screenshots/mycrypto4.png" width="" height="">
-</p>
+
+![ScreenShot](Screenshots/mycrypto4.PNG)
 
 Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
 
-<p align="center">
-    	<img src="Screenshots/mycrypto5.png" width="" height="">
-</p>
+
+![ScreenShot](Screenshots/mycrypto5.PNG)
 
 Click the Check TX Status when the green message pops up, confirm the logout:
 
-<p align="center">
-    	<img src="Screenshots/mycrypto6.png" width="" height="">
-</p>
+
+![ScreenShot](Screenshots/mycrypto6.PNG)
 
 
 
